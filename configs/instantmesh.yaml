@@ -1,0 +1,22 @@
+init_method: 'instantmesh'
+output_root: 'outputs/instant-mesh-large/fancy123_meshes'
+input_path: 'outputs/instant-mesh-large'
+fast_sr: true
+input_all_0_elevation: false
+deform_3D_method: 'Jacobian'  # Jacobian, vertex_replacement, 3D_deformation_field
+lap_weight: 100000 # 1e5
+use_vertex_wise_NBF: true
+fov: 30
+dist: 4
+azim_list: [30.0, 90.0, 150.0, 210.0, 270.0, 330.0]
+elevations: [20.0, -10.0, 20.0, -10.0, 20.0, -10.0]
+default_res: 320
+ortho: false
+#########################################
+device: 'cuda'
+load_normals: true
+use_alpha: true
+refine_sr_by_sd: false
+crop_input_view: true
+opt_geo_coarse2fine: false
+skip_3D_deform_but_still_unproject: false

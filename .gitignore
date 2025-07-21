@@ -1,0 +1,55 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+temp/
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+.vscode/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+.DS_Store
+
+
+
+ckpts/
+lightning_logs/
+logs/
+.trash/
+.env/
+outputs/
+figures*/
+
+unique3d/ckpt
+
+# Useless Files
+*.sh
+blender/
+.restore/
+
+# output files
+*.gif
+*.obj
+
+TensorrtExecutionProvider_*
+*.pt
+.fuse_hidden*
+
