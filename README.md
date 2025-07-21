@@ -25,10 +25,11 @@ https://github.com/user-attachments/assets/6700ac0d-7331-4097-8cf3-3a3e7ede6b70
 
 
 ## 🛠️Install & Model Download
-Please refer to scripts/install.md.
+Please refer to [scripts/install.md](scripts/install.md).
+
 
 ## ✅Training
-Fancy123 works in inference and is training free!
+Fancy123 works in inference and is training-free!
 
 ## 🎬Inference
 First, put your images under `examples', then run InstantMesh to get an initial mesh:
@@ -43,7 +44,7 @@ Then, run Fancy123's enhancement steps:
 python main_fancy123_refine.py
 ```
 You'll see results in outputs/instant-mesh-large/fancy123_meshes. 
-You can use tools like meshlab or blender to visualize the final result named `final_mesh.obj'.
+You can use tools like MeshLab or Blender to visualize the final result named `final_mesh.obj'.
 
 
 
