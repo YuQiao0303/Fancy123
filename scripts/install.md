@@ -1,18 +1,19 @@
-- To prepare the encironment for running Fancy123, follow the following steps.
+# Getting prepared to run Fancy123
+- To prepare the environment for running Fancy123, follow the following steps.
 - We use Python 3.10.14 and torch 2.1.0+cu118. 
-Other versions may also work, but we recommand torch2.1.0. 
+Other versions may also work, but we recommend torch 2.1.0. 
 - Our environment is mostly based on [InstantMesh](https://github.com/TencentARC/InstantMesh) and [Unique3D](https://github.com/AiuniAI/Unique3D/blob/main/Installation.md). If any problem occurs, it can be helpful to check their repos.
 - Feel free to leave an issue if you encounter any problem.
 
 
 
-# Create conda environment
+## Create conda environment
 ```bash
 conda create --name fancy123 python=3.10
 conda activate fancy123
 ```
 
-# Install basic stuff
+## Install basic stuff
 ```bash
 
 pip install ninja # Ensure Ninja is installed
@@ -34,7 +35,7 @@ pip install huggingface-hub==0.23.4
 ```
 
 
-# Install other stuff:
+## Install other stuff:
 ```bash
 pip install https://data.pyg.org/whl/torch-2.1.0%2Bcu118/torch_sparse-0.6.18%2Bpt21cu118-cp310-cp310-linux_x86_64.whl # torch sparse for 3D deformation
 
@@ -44,23 +45,23 @@ pip install https://data.pyg.org/whl/torch-2.1.0%2Bcu118/torch_scatter-2.1.2%2Bp
 
 pip install onnxruntime-gpu==1.18.1  --no-cache-dir --extra-index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-11/pypi/simple/
 ```
-# Install TensorRT for Fast_SR
-- We use Unique3D's fast_sr to increase resolution of multiview images. To accelerate this module, it's recommended to you install TensorRT, otherwise it would use CPU and would be slow.
+## Install TensorRT for Fast_SR
+- We use Unique3D's fast_sr to increase resolution of multiview images. To accelerate this module, it's recommended that you install TensorRT; otherwise it would use CPU and would be slow.
 
 - If you find it hard to install ommxruntime or tensorrt, you can:
-    - simply skip it, it would be slow but can still work
+    - simply skip it. It would be slow but can still work
     - Set fast_sr to False. The resolution would be lower.
 
 ```bash
 pip install https://pypi.nvidia.com/tensorrt-cu11/tensorrt-cu11-10.1.0.tar.gz
 
-# you also need to:
+# You also need to:
 export LD_LIBRARY_PATH=your_conda_path/envs/fancy123/lib/python3.10/site-packages/tensorrt_libs/:${LD_LIBRARY_PATH}
 # e.g. export LD_LIBRARY_PATH=/root/.conda/envs/fancy123/lib/python3.10/site-packages/tensorrt_libs/:${LD_LIBRARY_PATH}
 
 ```
 
-# Trouble Shooting
+## Troubleshooting
 - ImportError: cannot import name ‘packaging‘ from ‘pkg_resources‘:
     - ```python -m pip install setuptools==69.5.1```
 
@@ -74,12 +75,12 @@ export LD_LIBRARY_PATH=your_conda_path/envs/fancy123/lib/python3.10/site-package
 
 
 
-# Download Models
-For InstantMesh models, the python scripts will download them automatically. Alternatively, you can manually download the `instant-mesh-large` reconstruction model variant from the
+## Download Models
+- For InstantMesh models, the python scripts will download them automatically. Alternatively, you can manually download the `instant-mesh-large` reconstruction model variant from the
  [model card](https://huggingface.co/TencentARC/InstantMesh).
 
 
-For Unique3D's fast_sr, download the weights from [huggingface spaces](https://huggingface.co/spaces/Wuvin/Unique3D/tree/main/ckpt) or [Tsinghua Cloud Drive](https://cloud.tsinghua.edu.cn/d/319762ec478d46c8bdf7/), and extract it to unique3d/ckpt/realesrgan-x4.onnx.
+- For Unique3D's fast_sr, download the weights from [huggingface spaces](https://huggingface.co/spaces/Wuvin/Unique3D/tree/main/ckpt) or [Tsinghua Cloud Drive](https://cloud.tsinghua.edu.cn/d/319762ec478d46c8bdf7/), and extract it to unique3d/ckpt/realesrgan-x4.onnx.
 
 
 
