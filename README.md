@@ -29,7 +29,7 @@ Please refer to [scripts/install.md](scripts/install.md).
 
 
 ## ✅Training
-Fancy123 works in inference and is training-free!
+Fancy123 works during inference and is training-free!
 
 ## 🎬Inference
 First, put your images under `examples', then run InstantMesh to get an initial mesh:
