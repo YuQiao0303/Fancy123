@@ -1,5 +1,5 @@
 # Fancy123
-###  [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Yu_Fancy123_One_Image_to_High-Quality_3D_Mesh_Generation_via_Plug-and-Play_CVPR_2025_paper.html) | [![arXiv](https://img.shields.io/badge/arXiv-2411.16185-b31b1b.svg)](https://arxiv.org/abs/2411.16185)
+[![Paper](https://img.shields.io/badge/Paper-CVPR2025-006699.svg)](https://openaccess.thecvf.com/content/CVPR2025/html/Yu_Fancy123_One_Image_to_High-Quality_3D_Mesh_Generation_via_Plug-and-Play_CVPR_2025_paper.html)    [![arXiv](https://img.shields.io/badge/arXiv-2411.16185-b31b1b.svg)](https://arxiv.org/abs/2411.16185)
 
 This is the official repository for the CVPR2025 paper: *''Fancy123: One Image to High-Quality 3D Mesh Generation via Plug-and-Play Deformation''* by Qiao Yu, Xianzhi Li, Yuan Tang, Xu Han, Long Hu, Yixue Hao, and Min Chen.
 
