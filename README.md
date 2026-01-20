@@ -46,7 +46,12 @@ python main_fancy123_refine.py
 You'll see results in outputs/instant-mesh-large/fancy123_meshes. 
 You can use tools like MeshLab or Blender to visualize the final result named `final_mesh.obj'.
 
-
+### Tips for better results
+1. Check `unproject_wo_2D_deform.obj`: if its geometry seems bad, try  setting `geo_refine=False` in `main_fancy123_refine.py` L105.
+2. if `2D_deform_deformed.obj` seems ok but `3D_deformed_mesh.obj`  looks smaller or shrunk,  you can try setting `lap_weight` smaller or even to 0  in `configs/instantmesh.yaml`. We found that a larger laplacian weight makes the mesh shrink.
+3. if `2D_deform_deformed.obj` seems ok but `3D_deformed_mesh.obj` looks bad, it may be that no suitable camera parameters are found. If your input image is almost 0-elevation,  you can try setting `input_all_0_elevation` to True in `configs/instantmesh.yaml`. In this way we don't try to find the best camera parameters but use the default settings.
+4. If something seems wrong with the texture projecting, try `use_vertex_wise_NBF: False` in `configs/instantmesh.yaml`.
+If you still cannot get a good result, try other random seeds, or leave an issue so that I can see if there's anything that I can help.
 
 
 ## 🤝Acknowledgement
